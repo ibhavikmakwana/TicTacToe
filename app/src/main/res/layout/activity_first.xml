@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstActivity">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_first_player_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlineBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:imeOptions="actionNext"
+            android:layout_height="wrap_content"
+            android:hint="@string/first_player_name"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_second_player_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlineBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="@+id/til_first_player_name"
+        app:layout_constraintStart_toStartOf="@+id/til_first_player_name"
+        app:layout_constraintTop_toBottomOf="@+id/til_first_player_name">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:imeOptions="actionGo"
+            android:layout_height="wrap_content"
+            android:hint="@string/second_player_name"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        style="@style/TextAppearance.MaterialComponents.MaterialButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Continue"
+        android:background="@drawable/orange_gradient"
+        app:layout_constraintEnd_toEndOf="@+id/til_second_player_name"
+        app:layout_constraintStart_toStartOf="@+id/til_second_player_name"
+        app:layout_constraintTop_toBottomOf="@+id/til_second_player_name"/>
+</android.support.constraint.ConstraintLayout>
